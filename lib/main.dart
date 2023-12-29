@@ -26,15 +26,41 @@ class LoginForm extends StatelessWidget {
               ),
         ),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+
           // Memusatkan widget child di dalamnya
           children: [
-            SizedBox(height: 200),
+            SizedBox(height: 50),
             Container(
               alignment: Alignment.topCenter,
               child: Image.network(
                 imageUrl,
                 height: 200,
                 width: 200,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                  vertical: 16), // Menambah padding vertikal sebelum teks
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Login',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 8), // Spasi antara teks
+                  Text(
+                    'Sign in to continue',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
               ),
             ),
             Padding(
